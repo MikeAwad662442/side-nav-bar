@@ -1,0 +1,23 @@
+{
+  "NavBar": {
+    "HOME": "Home",
+    "Group1": "Group Pages 1",
+    "Group2": "Group Pages 2",
+    "Group3": "Group Pages 3",
+    "Blog": "Blog",
+    "Settings": "Settings",
+    "ABOUT_US": "About Us",
+    "Contact_US": "Contact Us"
+  },
+  "HomePage": {
+    "title": "Hello world!"
+  },
+  "LangInfo": {
+    "AR": "Arabic",
+    "EN": "English"
+  },
+  "LocaleLayout": {
+    "title": "Side Nav Bar",
+    "description": "A side menu that is compatible with different page sizes and turns into a drop-down menu on mobile pages."
+  }
+}

@@ -1,39 +1,23 @@
 "use client";
 
-import * as React from "react";
+import { useEffect, useState } from "react";
 import { MoonStar, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 
 import { Button } from "@/components/ui/button";
-// import {
-//   DropdownMenu,
-//   DropdownMenuContent,
-//   DropdownMenuItem,
-//   DropdownMenuTrigger,
-// } from "@/components/ui/dropdown-menu";
 
 export function ModeToggle() {
+  const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
-  const dark = theme === "dark";
-  return (
-    <Button
-      variant="outline"
-      size="icon"
-      onClick={() => setTheme(`${dark ? "light" : "dark"}`)}
-    >
-      {dark ? <Sun /> : <MoonStar />}
-    </Button>
-  );
-  //       <DropdownMenuContent align="end">
-  //         <DropdownMenuItem onClick={() => setTheme("light")}>
-  //           Light
-  //         </DropdownMenuItem>
-  //         <DropdownMenuItem onClick={() => setTheme("dark")}>
-  //           Dark
-  //         </DropdownMenuItem>
-  //         <DropdownMenuItem onClick={() => setTheme("system")}>
-  //           System
-  //         </DropdownMenuItem>
-  //       </DropdownMenuContent>
-  //     </DropdownMenu>
+  useEffect(() => setMounted(true), []);
+  if (theme === "dark") {
+    return <MoonStar onClick={() => setTheme("light")} />;
+  } else {
+    return <Sun onClick={() => setTheme("dark")} />;
+  }
+  // const dark = theme;
 }
+/**********************
+ * Note:
+ * we use this component to implement theme mode light | dark
+ **********************/
