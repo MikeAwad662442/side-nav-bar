@@ -1,4 +1,4 @@
-// import clsx from "clsx";
+import clsx from "clsx";
 import { Inter } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
 import {
@@ -10,8 +10,8 @@ import { ReactNode } from "react";
 // import Navigation from "@/components/Navigation";
 import { locales } from "@/config";
 // import { ThemeProvider } from "next-themes";
-import SideBar from "@/components/SideBar";
 import { ThemeProvider } from "@/components/theme-provider";
+import SideBar from "@/components/SideBar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -59,7 +59,7 @@ export default async function LocaleLayout({
           <ThemeProvider
             attribute="class"
             defaultTheme="Dark"
-            enableSystem
+            // enableSystem
             // disableTransitionOnChange
           >
             <SideBar locale={locale} />

@@ -35,3 +35,9 @@ module.exports = {
 ```js
 npm i -D eslint-config-prettier prettier prettier-plugin-tailwindcss
 ```
+
+## shadcn-ui Components
+
+```js
+npx shadcn-ui@latest add avatar button accordion dropdown-menu popover separator
+```
