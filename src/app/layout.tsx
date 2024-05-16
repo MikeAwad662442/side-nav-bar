@@ -1,11 +1,13 @@
 import { ReactNode } from "react";
 import "./globals.css";
-export default function RootLayout({
-  children,
-}: Readonly<{
+import { ThemeProvider } from "@/components/theme-provider";
+type Props = {
   children: ReactNode;
-}>) {
-  return children;
+  params: { locale: string };
+};
+
+export default function RootLayout({ children, params: { locale } }: Props) {
+  return { children };
 }
 /************************
  * Notes

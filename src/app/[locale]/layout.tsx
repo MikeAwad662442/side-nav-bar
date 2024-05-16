@@ -1,4 +1,4 @@
-import clsx from "clsx";
+// import clsx from "clsx";
 import { Inter } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
 import {
@@ -7,9 +7,7 @@ import {
   unstable_setRequestLocale,
 } from "next-intl/server";
 import { ReactNode } from "react";
-// import Navigation from "@/components/Navigation";
 import { locales } from "@/config";
-// import { ThemeProvider } from "next-themes";
 import { ThemeProvider } from "@/components/theme-provider";
 import SideBar from "@/components/SideBar";
 
@@ -42,7 +40,7 @@ export default async function LocaleLayout({
   // Providing all messages to the client
   // side is the easiest way to get started
   // Enable static rendering
-  unstable_setRequestLocale(locale);
+  // unstable_setRequestLocale(locale);
 
   // Providing all messages to the client
   // side is the easiest way to get started
@@ -55,13 +53,19 @@ export default async function LocaleLayout({
       suppressHydrationWarning
     >
       <body>
-        <NextIntlClientProvider messages={messages}>
-          <ThemeProvider
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="Dark"
+          // enableSystem
+          // disableTransitionOnChange
+        >
+          <NextIntlClientProvider messages={messages}>
+            {/* <ThemeProvider
             attribute="class"
             defaultTheme="Dark"
             // enableSystem
             // disableTransitionOnChange
-          >
+          > */}
             <SideBar locale={locale} />
             <div
               className={
@@ -72,8 +76,9 @@ export default async function LocaleLayout({
             >
               <main>{children}</main>
             </div>
-          </ThemeProvider>
-        </NextIntlClientProvider>
+            {/* </ThemeProvider> */}
+          </NextIntlClientProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

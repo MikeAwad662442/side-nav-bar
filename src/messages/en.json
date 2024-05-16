@@ -1,9 +1,24 @@
 {
   "NavBar": {
-    "HOME": "Home",
-    "Group1": "Group Pages 1",
-    "Group2": "Group Pages 2",
-    "Group3": "Group Pages 3",
+    "Home": "Home",
+    "Group1": {
+      "title": "chapter1",
+      "item1": "Pag1",
+      "item2": "page2",
+      "item3": "page3"
+    },
+    "Group2": {
+      "title": "chapter2",
+      "item1": "Pag1",
+      "item2": "page2",
+      "item3": "page3"
+    },
+    "Group3": {
+      "title": "chapter3",
+      "item1": "Pag1",
+      "item2": "page2",
+      "item3": "page3"
+    },
     "Blog": "Blog",
     "Settings": "Settings",
     "ABOUT_US": "About Us",
@@ -20,5 +35,9 @@
   "LocaleLayout": {
     "title": "Side Nav Bar",
     "description": "A side menu that is compatible with different page sizes and turns into a drop-down menu on mobile pages."
+  },
+  "AboutPage": {
+    "About_me": "As a front-end web developer, my primary responsibility is to create and implement the user interface of websites and web applications using HTML, CSS, and JavaScript.<br />I'm a back-end developer who works on server-side logic and database interactions. I use Express.js to build web applications and APIs and work with SQL and NoSQL databases to store and retrieve data.<br />So, I can say about myself that I am a full-stack developer",
+    "MyName": "Mike Awad"
   }
 }

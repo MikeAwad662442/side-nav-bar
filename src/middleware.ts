@@ -1,11 +1,11 @@
 import createMiddleware from "next-intl/middleware";
-import { pathnames, locales, localePrefix, defaultLocale } from "./config";
-
+// import { pathnames, locales, localePrefix, defaultLocale } from "./config";
+import { locales, defaultLocale } from "./config";
 export default createMiddleware({
   defaultLocale,
   locales,
-  pathnames,
-  localePrefix,
+  // pathnames,
+  // localePrefix,
 });
 
 export const config = {
@@ -13,7 +13,7 @@ export const config = {
   matcher: [
     // Enable a redirect to a matching locale at the root
     "/",
-
+    // "/((?!api|_next/static|_next/image|favicon.ico|apple-touch-icon.png|favicon.svg|images/books|icons|manifest).*)",
     // Set a cookie to remember the previous locale for
     // all requests that have a locale prefix
     "/(ar|en)/:path*",
